@@ -27,7 +27,8 @@ paths:
       - diagnostic
       - tools
       - verifycdnip
-      - ip
+      - ip addresses
+      - cdn
 definitions: []
 x-collection-name: Akamai
 x-streamrank:
