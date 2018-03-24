@@ -1,9 +1,9 @@
-title: Streamdata Gallery
-url: akamai.api.streamdata.gallery
+title: Streamdata Gallery Akamai
+url: akamai.streamdata.gallery
 tag: Akamai
 markdown: kramdown
 exclude: [".rvmrc", ".rbenv-version", "README.md", "Rakefile", "changelog.md", ".DS_Store"]
-github_user: streamdata-gallery-organizations
+github_user: streamdata-gallery
 github_repo: akamai
 github_branch: master
 collections:
