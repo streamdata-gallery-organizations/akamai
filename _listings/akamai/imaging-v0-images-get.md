@@ -12,13 +12,13 @@ consumes:
 paths:
   /imaging/v0/images:
     get:
-      summary: List Images Matching a URL
-      description: List Images Matching a URL
-      operationId: imagingv0imagesurl
+      summary: List a Policy&#8217;s Images
+      description: List a Policy&#8217;s Images
+      operationId: imagingv0imagespolicyid
       parameters:
       - in: String
-        name: url
-        description: URL to search for
+        name: policyId
+        description: Identifies the policy for which to get associated images
         type: string
       responses:
         200:
@@ -27,7 +27,7 @@ paths:
       - imaging
       - v0
       - images
-      - url
+      - policy
 definitions: []
 x-collection-name: Akamai
 x-streamrank:
