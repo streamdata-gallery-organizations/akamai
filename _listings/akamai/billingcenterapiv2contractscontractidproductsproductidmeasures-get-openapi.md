@@ -1,0 +1,569 @@
+---
+swagger: "2.0"
+x-collection-name: Akamai
+x-complete: 0
+info:
+  title: Akamai API List Usage per Contract
+  description: List Usage per Contract
+  version: 1.0.0
+host: developer.akamai.com
+basePath: /
+schemes:
+- http
+produces:
+- application/json
+consumes:
+- application/json
+paths:
+  /galaxy/v1/customers:
+    get:
+      summary: List Customers
+      description: List Customers
+      operationId: galaxyv1customersincludedeleteddebug
+      x-api-path-slug: galaxyv1customers-get
+      parameters:
+      - in: query
+        name: debug
+        description: The flag to include debug members in the response JSON
+        type: string
+      - in: query
+        name: includeDeleted
+        description: The flag to include deleted customers
+        type: string
+      responses:
+        200:
+          description: OK
+      tags:
+      - Galaxy
+      - Customers
+      - Includedeleted
+      - debug
+    post:
+      summary: Add a Customer
+      description: Add a Customer
+      operationId: galaxyv1customers
+      x-api-path-slug: galaxyv1customers-post
+      parameters:
+      - in: query
+        name: akamaiCustomerId
+        description: Akamai ID of the customer, maximum 50 characters
+        type: string
+      - in: query
+        name: debug
+        description: The flag to include debug members in the response JSON
+        type: string
+      responses:
+        200:
+          description: OK
+      tags:
+      - Galaxy
+      - Customers
+  /galaxy/v1/customers/{akamaiCustomerId}:
+    put:
+      summary: Modify a Customer
+      description: Modify a Customer
+      operationId: galaxyv1customersakamaicustomerid
+      x-api-path-slug: galaxyv1customersakamaicustomerid-put
+      parameters:
+      - in: query
+        name: akamaiCustomerId
+        description: Akamai ID of the customer, maximum 50 characters
+        type: string
+      responses:
+        200:
+          description: OK
+      tags:
+      - Galaxy
+      - Customers
+      - Akamaicustomer
+    delete:
+      summary: Remove a Customer
+      description: Remove a Customer
+      operationId: galaxyv1customersakamaicustomerid
+      x-api-path-slug: galaxyv1customersakamaicustomerid-delete
+      parameters:
+      - in: query
+        name: akamaiCustomerId
+        description: Akamai ID of the customer, maximum 50 characters
+        type: string
+      responses:
+        200:
+          description: OK
+      tags:
+      - Galaxy
+      - Customers
+      - Akamaicustomer
+  /galaxy/v1/customers/{akamaiCustomerId}/op/deactivate:
+    post:
+      summary: Deactivate a Customer
+      description: Deactivate a Customer
+      operationId: galaxyv1customersakamaicustomeridopdeactivate
+      x-api-path-slug: galaxyv1customersakamaicustomeridopdeactivate-post
+      parameters:
+      - in: query
+        name: akamaiCustomerId
+        description: Akamai ID of the customer, maximum 50 characters
+        type: string
+      responses:
+        200:
+          description: OK
+      tags:
+      - Galaxy
+      - Customers
+      - Akamaicustomer
+      - Op
+      - Deactivate
+  /galaxy/v1/customers/{akamaiCustomerId}/op/reactivate:
+    post:
+      summary: Reactivate a Customer
+      description: Reactivate a Customer
+      operationId: galaxyv1customersakamaicustomeridopreactivate
+      x-api-path-slug: galaxyv1customersakamaicustomeridopreactivate-post
+      parameters:
+      - in: query
+        name: akamaiCustomerId
+        description: Akamai ID of the customer, maximum 50 characters
+        type: string
+      responses:
+        200:
+          description: OK
+      tags:
+      - Galaxy
+      - Customers
+      - Akamaicustomer
+      - Op
+      - Reactivate
+  /galaxy/v1/clients:
+    get:
+      summary: List Clients
+      description: List Clients
+      operationId: galaxyv1clientsincludedeleteddebugself
+      x-api-path-slug: galaxyv1clients-get
+      parameters:
+      - in: query
+        name: debug
+        description: The flag to include debug members in the response JSON
+        type: string
+      - in: query
+        name: includeDeleted
+        description: The flag to include deleted customers
+        type: string
+      - in: query
+        name: self
+        description: The flag to get its own client information
+        type: string
+      responses:
+        200:
+          description: OK
+      tags:
+      - Galaxy
+      - Clients
+      - Includedeleted
+      - debug
+      - self
+    post:
+      summary: Add a Client
+      description: Add a Client
+      operationId: galaxyv1clients
+      x-api-path-slug: galaxyv1clients-post
+      parameters:
+      - in: query
+        name: clientId
+        description: Client ID of the device, maximum 50 characters
+        type: string
+      - in: query
+        name: debug
+        description: The flag to include debug members in the response JSON
+        type: string
+      responses:
+        200:
+          description: OK
+      tags:
+      - Galaxy
+      - Clients
+  /galaxy/v1/clients/{clientId}:
+    put:
+      summary: Modify a Client
+      description: Modify a Client
+      operationId: galaxyv1clientsclientid
+      x-api-path-slug: galaxyv1clientsclientid-put
+      parameters:
+      - in: query
+        name: clientId
+        description: Client ID of the device, maximum 50 characters
+        type: string
+      responses:
+        200:
+          description: OK
+      tags:
+      - Galaxy
+      - Clients
+      - Client
+    delete:
+      summary: Remove a Client
+      description: Remove a Client
+      operationId: galaxyv1clientsclientid
+      x-api-path-slug: galaxyv1clientsclientid-delete
+      parameters:
+      - in: query
+        name: clientId
+        description: Client ID of the device, maximum 50 characters
+        type: string
+      responses:
+        200:
+          description: OK
+      tags:
+      - Galaxy
+      - Clients
+      - Client
+  /galaxy/v1/customers/{clientId}/op/deactivate:
+    post:
+      summary: Deactivate a Client
+      description: Deactivate a Client
+      operationId: galaxyv1customersclientidopdeactivate
+      x-api-path-slug: galaxyv1customersclientidopdeactivate-post
+      parameters:
+      - in: query
+        name: clientId
+        description: Client ID of the device, maximum 50 characters
+        type: string
+      responses:
+        200:
+          description: OK
+      tags:
+      - Galaxy
+      - Customers
+      - Client
+      - Op
+      - Deactivate
+  /galaxy/v1/customers/{clientId}/op/reactivate:
+    post:
+      summary: Reactivate a Client
+      description: Reactivate a Client
+      operationId: galaxyv1customersclientidopreactivate
+      x-api-path-slug: galaxyv1customersclientidopreactivate-post
+      parameters:
+      - in: query
+        name: clientId
+        description: Client ID of the device, maximum 50 characters
+        type: string
+      responses:
+        200:
+          description: OK
+      tags:
+      - Galaxy
+      - Customers
+      - Client
+      - Op
+      - Reactivate
+  /galaxy/v1/client_groups:
+    get:
+      summary: Get Client Groups
+      description: Get Client Groups
+      operationId: galaxyv1client-groupsincludedeleteddebugself
+      x-api-path-slug: galaxyv1client-groups-get
+      parameters:
+      - in: query
+        name: debug
+        description: The flag to include debug members in the response JSON
+        type: string
+      - in: query
+        name: includeDeleted
+        description: The flag to include deleted customers
+        type: string
+      responses:
+        200:
+          description: OK
+      tags:
+      - Galaxy
+      - Client
+      - Groups
+      - Includedeleted
+      - debug
+      - self
+    post:
+      summary: Associate Multiple Activation Files for a DPC
+      description: Associate Multiple Activation Files for a DPC
+      operationId: galaxyv1client-groups
+      x-api-path-slug: galaxyv1client-groups-post
+      parameters:
+      - in: query
+        name: debug
+        description: The flag to include debug members in the response JSON
+        type: string
+      - in: query
+        name: includeDeleted
+        description: The flag to include deleted customers
+        type: string
+      responses:
+        200:
+          description: OK
+      tags:
+      - Galaxy
+      - Client
+      - Groups
+  /galaxy/v1/devices/{deviceId}:
+    get:
+      summary: Get a Device
+      description: Get a Device
+      operationId: galaxyv1devicesdeviceiddebug
+      x-api-path-slug: galaxyv1devicesdeviceid-get
+      parameters:
+      - in: query
+        name: debug
+        description: The flag to include debug members in the response JSON
+        type: string
+      - in: query
+        name: deviceId
+        description: Identifies the device, maximum 50 characters
+        type: string
+      responses:
+        200:
+          description: OK
+      tags:
+      - Galaxy
+      - Devices
+      - Device
+      - Debug
+    put:
+      summary: Modify a Device
+      description: Modify a Device
+      operationId: galaxyv1devicesdeviceid
+      x-api-path-slug: galaxyv1devicesdeviceid-put
+      parameters:
+      - in: query
+        name: deviceId
+        description: Identifies the device, maximum 50 characters
+        type: string
+      responses:
+        200:
+          description: OK
+      tags:
+      - Galaxy
+      - Devices
+      - Device
+    post:
+      summary: Add a Device
+      description: Add a Device
+      operationId: galaxyv1devicesdeviceid
+      x-api-path-slug: galaxyv1devicesdeviceid-post
+      parameters:
+      - in: query
+        name: deviceId
+        description: Identifies the device, maximum 50 characters
+        type: string
+      responses:
+        200:
+          description: OK
+      tags:
+      - Galaxy
+      - Devices
+      - Device
+    delete:
+      summary: Remove a Device
+      description: Remove a Device
+      operationId: galaxyv1devicesdeviceid
+      x-api-path-slug: galaxyv1devicesdeviceid-delete
+      parameters:
+      - in: query
+        name: deviceId
+        description: Identifies the device, maximum 50 characters
+        type: string
+      responses:
+        200:
+          description: OK
+      tags:
+      - Galaxy
+      - Devices
+      - Device
+  /galaxy/v1/devices/{deviceId}/op/deactivate:
+    post:
+      summary: Deactivate a Device
+      description: Deactivate a Device
+      operationId: galaxyv1devicesdeviceidopdeactivate
+      x-api-path-slug: galaxyv1devicesdeviceidopdeactivate-post
+      parameters:
+      - in: query
+        name: deviceId
+        description: Identifies the device, maximum 50 characters
+        type: string
+      responses:
+        200:
+          description: OK
+      tags:
+      - Galaxy
+      - Devices
+      - Device
+      - Op
+      - Deactivate
+  /galaxy/v1/devices/{deviceId}/op/reactivate:
+    post:
+      summary: Reactivate a Device
+      description: Reactivate a Device
+      operationId: galaxyv1devicesdeviceidopreactivate
+      x-api-path-slug: galaxyv1devicesdeviceidopreactivate-post
+      parameters:
+      - in: query
+        name: deviceId
+        description: Identifies the device, maximum 50 characters
+        type: string
+      responses:
+        200:
+          description: OK
+      tags:
+      - Galaxy
+      - Devices
+      - Device
+      - Op
+      - Reactivate
+  /galaxy/v1/build:
+    get:
+      summary: Get Build Information
+      description: Get Build Information
+      operationId: galaxyv1build
+      x-api-path-slug: galaxyv1build-get
+      responses:
+        200:
+          description: OK
+      tags:
+      - Galaxy
+      - Build
+  /billing-center-api/v2/contracts/{contractId}/products/{productId}/statistics:
+    get:
+      summary: List Statistics per Contract
+      description: List Statistics per Contract
+      operationId: billingcenterapiv2contractscontractidproductsproductidstatisticsyearmonthfromyearfrommonthtoyeartomo
+      x-api-path-slug: billingcenterapiv2contractscontractidproductsproductidstatistics-get
+      parameters:
+      - in: query
+        name: contractId
+        description: Identifies the contract under which data is aggregated
+        type: string
+      - in: query
+        name: fromMonth
+        description: The month starting the range of aggregated data
+        type: string
+      - in: query
+        name: fromYear
+        description: The year starting the range of aggregated data
+        type: string
+      - in: query
+        name: month
+        description: The month for which data is aggregated
+        type: string
+      - in: query
+        name: productId
+        description: Identifies the product under which data is aggregated
+        type: string
+      - in: query
+        name: toMonth
+        description: The month ending the range of aggregated data
+        type: string
+      - in: query
+        name: toYear
+        description: The year ending the range of aggregated data
+        type: string
+      - in: query
+        name: year
+        description: The year for which data is aggregated
+        type: string
+      responses:
+        200:
+          description: OK
+      tags:
+      - Billing
+      - Center
+      - Contracts
+      - Contract
+      - Products
+      - Product
+      - Statistics
+      - Year
+      - month
+      - fromyear
+      - frommonth
+      - toyear
+      - tomonth
+  /billing-center-api/v2/contracts/{contractId}/products/{productId}/measures:
+    get:
+      summary: List Usage per Contract
+      description: List Usage per Contract
+      operationId: billingcenterapiv2contractscontractidproductsproductidmeasuresyearmonthfromyearfrommonthtoyeartomont
+      x-api-path-slug: billingcenterapiv2contractscontractidproductsproductidmeasures-get
+      parameters:
+      - in: query
+        name: billingDayOnly
+        description: Aggregates cumulative data as of the end of the billing period,
+          typically the end of the month, otherwise the day the contract&#8217;s term
+          expires
+        type: string
+      - in: query
+        name: contractId
+        description: Identifies the contract under which data is aggregated
+        type: string
+      - in: query
+        name: fromMonth
+        description: The month starting the range of aggregated data
+        type: string
+      - in: query
+        name: fromYear
+        description: The year starting the range of aggregated data
+        type: string
+      - in: query
+        name: month
+        description: The month for which data is aggregated
+        type: string
+      - in: query
+        name: productId
+        description: Identifies the product under which data is aggregated
+        type: string
+      - in: query
+        name: statisticName
+        description: Reports on a specific statistic, otherwise reports all statistics
+          by default
+        type: string
+      - in: query
+        name: toMonth
+        description: The month ending the range of aggregated data
+        type: string
+      - in: query
+        name: toYear
+        description: The year ending the range of aggregated data
+        type: string
+      - in: query
+        name: year
+        description: The year for which data is aggregated
+        type: string
+      responses:
+        200:
+          description: OK
+      tags:
+      - Billing
+      - Center
+      - Contracts
+      - Contract
+      - Products
+      - Product
+      - Measures
+      - Year
+      - month
+      - fromyear
+      - frommonth
+      - toyear
+      - tomonth
+      - statisticname
+      - billingdayonly
+x-streamrank:
+  polling_total_time_average: 0
+  polling_size_download_average: 0
+  streaming_total_time_average: 0
+  streaming_size_download_average: 0
+  change_yes: 0
+  change_no: 0
+  time_percentage: 0
+  size_percentage: 0
+  change_percentage: 0
+  last_run: ""
+  days_run: 0
+  minute_run: 0
+---
